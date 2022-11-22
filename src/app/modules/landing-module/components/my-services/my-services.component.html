@@ -1,0 +1,25 @@
+<div class="my-services-container">
+    <h1>My Services</h1>
+    <div class="my-services-block">
+        <mat-card
+                (mouseover)="service.cardDetailsShow = true"
+                (mouseleave)="service.cardDetailsShow = false"
+                (touchstart)="service.cardDetailsShow = true"
+                (touchend)="service.cardDetailsShow = false"
+                class="my-services-card"
+                [ngClass]="{'hover-effect': service.cardDetailsShow}"
+                *ngFor="let service of myServicesArray">
+            <mat-card-header>
+                <mat-card-title>{{ service.title }}</mat-card-title>
+            </mat-card-header>
+            <img *ngIf="!service.cardDetailsShow"
+                 mat-card-image
+                 src="{{ service.imgUrl }}"
+                 alt="{{ service.title }}"
+            />
+            <mat-card-content *ngIf="service.cardDetailsShow">
+                <p [innerHTML]="service.description"></p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</div>

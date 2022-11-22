@@ -1,0 +1,136 @@
+.contact-me-container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding-top: 10%;
+  padding-bottom: 10%;
+
+  .contact-me-container-left {
+    img {
+      width: 100%;
+    }
+  }
+
+  .contact-me-container-left, .contact-me-container-right {
+    width: 50%;
+  }
+
+  h1 {
+    text-align: center;
+    height: 40px;
+    width: 250px;
+    line-height: 40px;
+    background: white;
+    font-family: "Space Mono", Arial, serif;
+  }
+
+  .contact-me {
+    &-block {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 100px);
+      align-items: center;
+
+      mat-form-field {
+        width: 100%;
+
+        input {
+          font-family: "Space Mono", Arial, serif;
+        }
+      }
+
+      ::ng-deep {
+        /* Border */
+        .mat-form-field-appearance-outline .mat-form-field-outline {
+          color: rgba(255, 144, 0, 0.9);
+        }
+
+        /* Font color */
+        mat-label {
+          color: rgba(255, 144, 0, 0.9);
+        }
+      }
+
+      .proposal-field {
+        height: 450px;
+
+        ::ng-deep {
+          .mat-form-field-wrapper, .mat-form-field-flex, textarea {
+            height: 100%;
+          }
+
+          .mat-form-field-wrapper {
+            margin-bottom: 0;
+          }
+
+          textarea {
+            resize: none;
+            font-family: "Space Mono", Arial, serif;
+          }
+
+          .mat-form-field-infix {
+            height: calc(100% - 25px);
+          }
+        }
+      }
+
+      button {
+        width: 50%;
+        margin-top: 25px;
+        color: rgba(255, 144, 0, 0.9);
+        border-color: rgba(255, 144, 0, 0.9);
+        height: 45px;
+
+        &:hover {
+          background: rgba(255, 144, 0, 0.9);
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .contact-me-container {
+    flex-direction: column;
+
+    .contact-me-container-left {
+      display: flex;
+      justify-content: center;
+
+      img {
+        width: 95%;
+      }
+    }
+
+    .contact-me-container-left, .contact-me-container-right {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .contact-me-container {
+    h1 {
+      width: 100%;
+    }
+
+    .contact-me__form {
+      width: calc(100% - 35px);
+
+      .proposal-field {
+        height: 250px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  }
+}

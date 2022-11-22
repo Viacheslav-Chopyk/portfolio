@@ -1,0 +1,91 @@
+.my-services-container {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 10%;
+  padding-bottom: 10%;
+  background: rgba(255, 144, 0, 0.9);
+
+  h1 {
+    color: white;
+  }
+
+  .my-services-block {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 60%;
+
+    h2 {
+      color: white;
+      text-align: center;
+      height: 40px;
+      width: 250px;
+      line-height: 40px;
+    }
+
+    .my-services-card {
+      width: 320px;
+      height: 330px;
+      border: 2px solid white;
+      border-radius: 25px;
+      margin: 15px;
+      padding: 15px 20px;
+      color: white;
+      cursor: pointer;
+      box-sizing: border-box;
+
+      ::ng-deep {
+        .mat-card-image {
+          height: 268px;
+          object-fit: contain;
+        }
+      }
+
+      mat-card-header {
+        text-align: center;
+        width: 100%;
+
+        ::ng-deep {
+          .mat-card-header-text {
+            width: 100%;
+            font-size: 24px;
+            color: black;
+            font-family: "Space Mono", Arial, serif;
+          }
+        }
+      }
+    }
+  }
+}
+
+.hover-effect {
+  background: transparent !important;
+  color: white !important;
+  transition: all 1s ease-out;
+
+  ::ng-deep {
+    .mat-card-header {
+      .mat-card-header-text {
+        color: white !important;
+      }
+    }
+
+    .mat-card-content {
+      padding-top: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .my-services-container {
+    .my-services-block {
+      width: 80%;
+
+      .my-services-card {
+        height: 300px;
+      }
+    }
+  }
+}
