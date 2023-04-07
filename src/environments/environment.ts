@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  formSpreeApi: 'https://formspree.io/f/xayvabyw'
+  https://formspree.io/f/xoqzpagy
  
 };
 
