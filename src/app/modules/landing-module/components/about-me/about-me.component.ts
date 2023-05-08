@@ -12,7 +12,7 @@ export class AboutMeComponent implements OnInit {
 
   openCV(): void {
     window.open(
-        "https://chopyk89.github.io/portfolio/assets/cv/CV_Chopyk.pdf",
+        "https://chopyk89.github.io/portfolio/assets/CV_Chopyk.pdf",
       "_blank",
       "fullscreen=yes"
     );
