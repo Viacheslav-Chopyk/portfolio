@@ -3,3 +3,4 @@ ng ng /node_modules/
 dist
 .vscode
 /node_modules/
+/.angular/cache
