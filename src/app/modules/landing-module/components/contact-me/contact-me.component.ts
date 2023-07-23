@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup, Validators} from "@angular/forms";
 import {ApiService} from "../../../../core/services/api.service";
 import {FormSpreeInterface} from "../../../../core/interface/formspree.interface";
 import {MatSnackBar} from "@angular/material/snack-bar";
@@ -10,9 +10,9 @@ import {MatSnackBar} from "@angular/material/snack-bar";
     styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent implements OnInit {
-    contactMeForm = new FormGroup({
-        firstName: new FormControl('', [Validators.required]),
-        proposalArea: new FormControl('', [Validators.required]),
+    contactMeForm = new UntypedFormGroup({
+        firstName: new UntypedFormControl('', [Validators.required]),
+        proposalArea: new UntypedFormControl('', [Validators.required]),
     });
 
     constructor(private apiService: ApiService, private _snackBar: MatSnackBar) {
@@ -27,7 +27,7 @@ export class ContactMeComponent implements OnInit {
             proposal_area: this.contactMeForm.value.proposalArea
         }
 
-        this.apiService.sendMail(requestData).subscribe(resp => {
+        this.apiService.sendMail(requestData).subscribe(() => {
             this._snackBar.open(
                 'Successfully Send!!',
                 'X',
