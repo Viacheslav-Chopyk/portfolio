@@ -12,17 +12,17 @@ import {ContactMeComponent} from './components/contact-me/contact-me.component';
 import {SharedModule} from "../shared-module/shared.module";
 
 @NgModule({
-    declarations: [
-        PreviewComponent,
-        LandingComponent,
-        AboutMeComponent,
-        LifeRoadComponent,
-        MyServicesComponent,
-        MyWorkComponent,
-        ContactMeComponent,
-    ],
-    imports: [CommonModule, LandingRoutingModule, SharedModule],
-    providers: [],
+  declarations: [
+    PreviewComponent,
+    LandingComponent,
+    AboutMeComponent,
+    LifeRoadComponent,
+    MyServicesComponent,
+    MyWorkComponent,
+    ContactMeComponent,
+  ],
+  imports: [CommonModule, LandingRoutingModule, SharedModule],
+  providers: [],
 })
 export class LandingModule {
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import {Component, OnInit} from "@angular/core";
 
 @Component({
   selector: "app-landing-module",
@@ -6,7 +6,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./landing.component.scss"],
 })
 export class LandingComponent implements OnInit {
-  constructor() {}
+  constructor() {
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+  }
 }

@@ -1,25 +1,25 @@
 <div class="contact-me-container">
-    <div class="contact-me-container-left">
-        <img src="https://chopyk89.github.io/portfolio/assets/images/website_development.png" alt="">
+  <div class="contact-me-container-left">
+    <img src="https://chopyk89.github.io/portfolio/assets/images/website_development.png" alt="">
+  </div>
+  <div class="contact-me-container-right">
+    <h1>Contact Me</h1>
+    <div class="contact-me-block">
+      <form class="contact-me__form"
+            [formGroup]="contactMeForm"
+            (ngSubmit)="sendMail()">
+        <mat-form-field appearance="outline">
+          <mat-label>First name *</mat-label>
+          <input formControlName="firstName" matInput>
+        </mat-form-field>
+        <mat-form-field class="proposal-field" appearance="outline">
+          <mat-label>Proposal *</mat-label>
+          <textarea formControlName="proposalArea" matInput placeholder=""></textarea>
+        </mat-form-field>
+        <button [disabled]="contactMeForm.invalid" mat-stroked-button type="submit">
+          Submit
+        </button>
+      </form>
     </div>
-    <div class="contact-me-container-right">
-        <h1>Contact Me</h1>
-        <div class="contact-me-block">
-            <form class="contact-me__form"
-                  [formGroup]="contactMeForm"
-                  (ngSubmit)="sendMail()">
-                <mat-form-field appearance="outline">
-                    <mat-label>First name *</mat-label>
-                    <input formControlName="firstName" matInput>
-                </mat-form-field>
-                <mat-form-field class="proposal-field" appearance="outline">
-                    <mat-label>Proposal *</mat-label>
-                    <textarea formControlName="proposalArea" matInput placeholder=""></textarea>
-                </mat-form-field>
-                <button [disabled]="contactMeForm.invalid" mat-stroked-button type="submit">
-                    Submit
-                </button>
-            </form>
-        </div>
-    </div>
+  </div>
 </div>
