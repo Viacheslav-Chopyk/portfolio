@@ -23,6 +23,10 @@ export class ContactMeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  resetForm(): void {
+    this.contactMeForm.reset();
+  }
+  
   sendMail(): void {
     const requestData: FormSpreeInterface = {
       first_name: this.contactMeForm.value.firstName,
@@ -35,5 +39,6 @@ export class ContactMeComponent implements OnInit {
         'X',
         {duration: 3000, panelClass: ['success-snackbar']});
     })
+    this.resetForm();
   }
 }
